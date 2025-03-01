@@ -11,20 +11,18 @@ total = 153
 
 class Bird:
     def __init__(self):
-        self.x = 3  # x coordinate
-        self.y = 2  # y coordinate
-        self.y_velocity = 0  # y velocity
+        self.x = 3 
+        self.y = 2  
+        self.y_velocity = 0  
         self.flapVelocity = -1.25
-        self.gravity = 0.25  # gravity variable
+        self.gravity = 0.25  
         self.file_name = "C:/Users/HP/Desktop/Flappybird/bird.jpg"
         self.max_fall_velocity = 1.25
         self.previousFileNumber = 152
 
     def update(self):
-        # Add gravity to the velocity
         if self.y_velocity < self.max_fall_velocity:
             self.y_velocity += self.gravity
-        # Update the y position with the velocity
         self.y += self.y_velocity
 
     def flap(self):
